@@ -1,0 +1,53 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>1bb63a26:00e8ba23:601e9615</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number></f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>PART ONE VT CLOCK</f>
+<f id=camera></f>
+<f id=video-id></f>
+<f id=pres1></f>
+<f id=pres2></f>
+<f id=format>GFX1</f>
+<f id=audio-time>0</f>
+<f id=runs-time>0</f>
+<f id=total-time uec>0</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel></f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617237</f>
+<f id=create-by>richjack</f>
+<f id=modify-date>1612617237</f>
+<f id=modify-by>grahgee</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+<p><a idref=0><cc><b>10 SECOND VT CLOCK PART 1</b></cc></p>
+<p></p>
+</body>
+<aeset>
+<ae id=0>
+<ap>]] S3.0 M 0 [[</ap>
+<mc>
+<ap>maestro ]] 9 YNYFM 60 [[ [A] (COUNTDOWN) 4//true/true/true/true//SELECT WHICH SHOW/SECOND/COUNTDOWN/CHOOSE HOW MANY SECONDS/SHOW NAME/TYPE SHOW NAME BELOW/MON/1st/JAN/2021/PART/4/OF/1/10 SECOND COUNTDOWN/Cuts to black at 3 seconds</ap>
+</mc>
+</ae>
+</aeset>
+</story>

@@ -1,0 +1,83 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>1eb63a29:00e9504e:601e9616</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number></f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>** DENISE VAN OUTEN CHAT</f>
+<f id=camera></f>
+<f id=video-id></f>
+<f id=pres1> </f>
+<f id=pres2></f>
+<f id=format>PANEL CHAT</f>
+<f id=audio-time>0</f>
+<f id=runs-time>0</f>
+<f id=total-time uec>420</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel>**</f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617238</f>
+<f id=create-by>richjack</f>
+<f id=modify-date>1612617238</f>
+<f id=modify-by>joceshar</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+<p><cc><u><b>PERMA STRAPS</b></u></cc></p>
+<p><a idref=0><cc><b>PERMA STRAP V4 - Dancing on Ice's Denise Van Outen</b></cc></p>
+<p><a idref=1><cc><b>PERMA STRAP V4 - Denise Van Outen's new single</b></cc></p>
+<p><cc></cc></p>
+<p></p>
+<p><cc><u><b>ITEM STRUCTURE:</b></u></cc></p>
+<p><cc>Ad lib panel chat</cc></p>
+<p></p>
+<p></p>
+<p><cc><u><b>STILLS (Grommets go in separate slugs):</b></u></cc></p>
+<p><cc>STILL 1: DENISE INJURY </cc></p>
+<p><cc>STILL 2: DENISE INJURY SLING</cc></p>
+<p><cc>STILL 3: DENISE &amp; MATT IN TRAINING </cc></p>
+<p><cc>STILL 4: DENISE, FAMILY &amp; MATT</cc></p>
+<p><cc>STILL 5: DENISE &amp; EDDIE</cc></p>
+<p><cc>STILL 6: DENISE, EDDIE &amp; BETSY</cc></p>
+<p><cc>STILL 7: DENISE &amp; JOHNNY VAUGHN - THE BIG BREAKFAST</cc></p>
+<p></p>
+<p><cc><u><b>VTS (Grommets go in separate slugs):</b></u></cc></p>
+<p><cc>VT: DENISE MUSIC VIDEO</cc></p>
+<p><cc>VT: EDDIE VIDEO MESSAGE</cc></p>
+<p></p>
+<p><cc><u><b>ULAYS (Grommets go</b></u><b> </b><u><b>in</b></u><b> </b><u><b>separate</b></u><b> </b><u><b>slugs):</b></u></cc></p>
+<p><cc>ULAY: DENISE DOI SKATE </cc></p>
+<p><cc>ULAY: DENISE DOI INJURY</cc></p>
+<p></p>
+</body>
+<aeset>
+<ae id=0>
+<ap>]] S3.0 M 0 [[</ap>
+<mc>
+<ap>maestro ]] 60 YNYCM 1 [[ [A] (STRAP_PERMA_2020_V4 --- RUNS UNDERNEATH) Dancing on Ice's Denise Van Outen</ap>
+</mc>
+</ae>
+<ae id=1>
+<ap>]] S3.0 M 0 [[</ap>
+<mc>
+<ap>maestro ]] 61 YNYBM 1 [[ [A] (STRAP_PERMA_2020_V4 --- RUNS UNDERNEATH) Denise Van Outen's new single</ap>
+</mc>
+</ae>
+</aeset>
+</story>

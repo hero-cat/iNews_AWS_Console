@@ -1,0 +1,57 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>01b63a29:00e8c8eb:601e9615</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number></f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>GFX1: COMING UP STRAPS</f>
+<f id=camera>KEEP </f>
+<f id=video-id></f>
+<f id=pres1></f>
+<f id=pres2></f>
+<f id=format>GFX1 STRAP DURING CHAT </f>
+<f id=audio-time>0</f>
+<f id=runs-time>0</f>
+<f id=total-time>0</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel>!!!</f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617237</f>
+<f id=create-by>richjack</f>
+<f id=modify-date>1612617237</f>
+<f id=modify-by>olivgard</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+<p><cc><u><b>COMING</b></u><b> </b><u><b>UP STRAPS</b></u></cc></p>
+<p></p>
+<p><a idref=1><cc><b>COMING UP (NEW VERSION): XXXX</b></cc></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+<aeset>
+<ae id=1>
+<ap>]] S3.0 M 0 [[</ap>
+<mc>
+<ap>maestro ]] 5 YNYAM 5 [[ [A] (STRAP_COMING_UP_2020_V3) 00:00/Enter Text Here</ap>
+</mc>
+</ae>
+</aeset>
+</story>

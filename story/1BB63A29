@@ -1,0 +1,65 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta words=48 rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>1bb63a29:00e93491:601e9616</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number></f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>** DENISE VAN OUTEN INTRO</f>
+<f id=camera>CAM1</f>
+<f id=video-id></f>
+<f id=pres1> </f>
+<f id=pres2></f>
+<f id=format>M/CU CHARLENE</f>
+<f id=audio-time>16</f>
+<f id=runs-time>0</f>
+<f id=total-time uec>20</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel>**</f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617238</f>
+<f id=create-by>richjack</f>
+<f id=modify-date>1612617238</f>
+<f id=modify-by>joceshar</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+<p><a idref=0><pi>CHARLENE</pi></p>
+<p>Our first guest today was warming up and lacing her skates ready to wow us on this year's Dancing on Ice - until this happened...</p>
+<p></p>
+<p><pi><b>**PAUSE FOR VT**</b></pi></p>
+<p><pi><b>VT: DANCING ON ICE</b></pi></p>
+<p></p>
+<p>Denise Van Outen's injury might have forced her out of the competition but fortunately for us she's here now to tell us all about it.</p>
+<p></p>
+<p>Hi Denise, how are you?</p>
+<p></p>
+<p><a idref=1><pi>AD LIB PANEL CHAT WITH DENISE </pi></p>
+<p></p>
+</body>
+<aeset>
+<ae id=0>
+<ap>]] S3.0 G 0 [[</ap>
+<ap></ap>
+</ae>
+<ae id=1>
+<ap>]] S3.0 G 0 [[</ap>
+<ap></ap>
+</ae>
+</aeset>
+</story>

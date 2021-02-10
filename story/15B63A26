@@ -1,0 +1,58 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>15b63a26:00e8ba11:601e9615</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number>P.09</f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>ULAY: XXX</f>
+<f id=camera></f>
+<f id=video-id></f>
+<f id=pres1></f>
+<f id=pres2></f>
+<f id=format></f>
+<f id=audio-time>0</f>
+<f id=runs-time>0</f>
+<f id=total-time>0</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel></f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617237</f>
+<f id=create-by>richjack</f>
+<f id=modify-date>1612617237</f>
+<f id=modify-by>olivgard</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+<p><a idref=0></p>
+</body>
+<aeset>
+<ae id=0>
+<ap>]] S3.0 G 0 [[</ap>
+<ap>XXXX ULAY</ap>
+<ap>CLIP ID:</ap>
+<ap>RT=</ap>
+<ap>SHOWS:</ap>
+<ap>NB: Copyright details</ap>
+<ap>Please indicate supplier shot by shot</ap>
+<ap>(c)All material from:</ap>
+<ap>except:</ap>
+<ap>and:</ap>
+</ae>
+</aeset>
+</story>

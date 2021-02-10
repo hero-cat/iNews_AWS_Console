@@ -1,0 +1,84 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta words=61 rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>15b63a29:00e93210:601e9616</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number></f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>** WELCOME BACK</f>
+<f id=camera>CAM1</f>
+<f id=video-id></f>
+<f id=pres1></f>
+<f id=pres2></f>
+<f id=format>M/S -&gt; M/CU CHARLENE</f>
+<f id=audio-time>20</f>
+<f id=runs-time>0</f>
+<f id=total-time uec>20</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel>*!!!</f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617238</f>
+<f id=create-by>richjack</f>
+<f id=modify-date>1612617238</f>
+<f id=modify-by>joceshar</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+<p><cc><b>OUT OF BREAK BUMPER</b></cc></p>
+<p><cc><b>WIDESHOT</b></cc></p>
+<p></p>
+<p><a idref=0><pi>CHARLENE</pi></p>
+<p>Welcome back to your Monday Loose Women. </p>
+<p><pi><b>PANEL C/A</b></pi></p>
+<p>With, Paris Fury, Jane Moore, Judi Love and me, Charlene White</p>
+<p></p>
+<p></p>
+<p>Coming up </p>
+<p><a idref=1><cc><b>COMING UP CORNER  (NO WIPE): XXXX</b></cc></p>
+<p><cc><b>ULAY: </b></cc></p>
+<p><cc><b>TBC</b></cc></p>
+<p></p>
+<p></p>
+<p>And have we been getting flirting all wrong?</p>
+<p><pi><b>** PAUSE FOR VT **</b></pi></p>
+<p><pi><b>VT: TOM READ WILSON - BELLY BUTTON</b></pi></p>
+<p><a idref=2><cc><b>COMING UP CORNER  (NO WIPE): XXX / DATING MASTERCLASS</b></cc></p>
+<p>He's the dating coach to the stars - Celebs go Dating's Tom Read Wilson will be giving us his guide to finding love in lockdown.</p>
+<p><cc><b>C/A: JUDI</b></cc></p>
+<p>And our single lady Judi will be getting a masterclass in finding a man. </p>
+<p></p>
+</body>
+<aeset>
+<ae id=0>
+<ap>]] S3.0 G 0 [[</ap>
+<ap></ap>
+</ae>
+<ae id=1>
+<ap>]] S3.0 M 0 [[</ap>
+<mc>
+<ap>maestro ]] 29 YNYAM 5 [[ [A] (LW 2020 COMING_UP_CORNER_NO WIPE) /QWQWQWQW/12.45pm/1</ap>
+</mc>
+</ae>
+<ae id=2>
+<ap>]] S3.0 M 0 [[</ap>
+<mc>
+<ap>maestro ]] 30 YNYAM 5 [[ [A] (LW 2020 COMING_UP_CORNER_NO WIPE) /QWQWQWQW/12.45pm/1</ap>
+</mc>
+</ae>
+</aeset>
+</story>

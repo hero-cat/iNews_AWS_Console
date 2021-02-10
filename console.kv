@@ -1,0 +1,88 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    MDToolbar:
+        title: "iNews > AWS Control Console"
+
+    MDLabel:
+        size_hint_y: .1
+        id: counter
+        font_size: 18
+
+    BoxLayout:
+
+        MDLabel:
+            size_hint_y: .1
+
+        MDRaisedButton:
+            text: "START"
+            size_hint: None, None
+            size: 200, 100
+            md_bg_color: 0.262, 0.658, 0.596, 1
+            font_size: 30
+            on_release: app.start()
+
+        MDLabel:
+
+        MDRaisedButton:
+            text: "STOP"
+            size_hint: None, None
+            size: 200, 100
+            md_bg_color: 0.976, 0.396, 0.384, 1
+            font_size: 30
+            on_release: app.stop()
+
+        MDLabel:
+
+    BoxLayout:
+
+        MDLabel
+
+        MDRaisedButton:
+            id: inewspulllbl
+            text: "RETRIEVING \nRUNDOWN"
+            size_hint: None, None
+            size: 200, 100
+            md_bg_color: 0.819, 0.819, 0.819, 1
+            text_color: 0, 0, 0, 1
+            font_size: 15
+
+        MDLabel
+
+        MDRaisedButton:
+            id: inewsconflbl
+            text: "RUNDOWN \nRETRIEVED"
+            size_hint: None, None
+            size: 200, 100
+            md_bg_color: 0.819, 0.819, 0.819, 1
+            text_color: 0, 0, 0, 1
+            font_size: 15
+
+        MDLabel
+
+        MDRaisedButton:
+            id: awspushlbl
+            text: "PUSH TO \nAWS"
+            size_hint: None, None
+            size: 200, 100
+            md_bg_color: 0.819, 0.819, 0.819, 1
+            text_color: 0, 0, 0, 1
+            font_size: 15
+
+        MDLabel
+
+        MDRaisedButton:
+            id: awsconflbl
+            text: "RUNDOWN \nPUSHED"
+            size_hint: None, None
+            size: 200, 100
+            md_bg_color: 0.819, 0.819, 0.819, 1
+            text_color: 0, 0, 0, 1
+            font_size: 15
+
+        MDLabel
+
+    MDLabel
+        id: confbox
+        halign: "center"
+        text: 'STOPPED'

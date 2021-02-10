@@ -1,0 +1,73 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta words=31 rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>0cb63a28:00e8c280:601e9615</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number></f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>** WELCOME BACK</f>
+<f id=camera>CAM1</f>
+<f id=video-id></f>
+<f id=pres1></f>
+<f id=pres2></f>
+<f id=format>M/S -&gt; M/CU CHARLENE</f>
+<f id=audio-time>10</f>
+<f id=runs-time>0</f>
+<f id=total-time uec>20</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel>!!!</f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617237</f>
+<f id=create-by>richjack</f>
+<f id=modify-date>1612617237</f>
+<f id=modify-by>joceshar</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+<p><cc><b>OUT OF BREAK BUMPER</b></cc></p>
+<p><cc><b>WIDESHOT</b></cc></p>
+<p></p>
+<p></p>
+<p><pi>CHARLENE</pi></p>
+<p>Welcome back, lot's lined up for you today...</p>
+<p><a idref=0><cc><b>COMING UP CORNER  (NO WIPE): XXX / DENISE VAN OUTEN</b></cc></p>
+<p><cc><b>ULAY: DENISE DOI SKATE</b></cc></p>
+<p>Denise Van Outen will be talking injuries, getting back on the ice, and the surprising souvenir she took home from the show. </p>
+<p></p>
+<p></p>
+<p>Plus,</p>
+<p><a idref=1><cc><b>COMING UP CORNER  (NO WIPE): XXXX</b></cc></p>
+<p><cc><b>ULAY: XXX OR C/A: XXX </b></cc></p>
+<p>TBC</p>
+<p></p>
+</body>
+<aeset>
+<ae id=0>
+<ap>]] S3.0 M 0 [[</ap>
+<mc>
+<ap>maestro ]] 29 YNYAM 5 [[ [A] (LW 2020 COMING_UP_CORNER_NO WIPE) /QWQWQWQW/12.45pm/1</ap>
+</mc>
+</ae>
+<ae id=1>
+<ap>]] S3.0 M 0 [[</ap>
+<mc>
+<ap>maestro ]] 30 YNYAM 5 [[ [A] (LW 2020 COMING_UP_CORNER_NO WIPE) /QWQWQWQW/12.45pm/1</ap>
+</mc>
+</ae>
+</aeset>
+</story>

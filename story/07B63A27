@@ -1,0 +1,43 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>07b63a27:00e8ba77:601e9615</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number></f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>C/A: JUDI</f>
+<f id=camera></f>
+<f id=video-id></f>
+<f id=pres1></f>
+<f id=pres2></f>
+<f id=format></f>
+<f id=audio-time>0</f>
+<f id=runs-time>0</f>
+<f id=total-time>0</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel></f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617237</f>
+<f id=create-by>katistor</f>
+<f id=modify-date>1612617237</f>
+<f id=modify-by>katistor</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+</body>
+</story>

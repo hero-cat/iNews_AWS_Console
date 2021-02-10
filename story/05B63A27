@@ -1,0 +1,47 @@
+<nsml version="-//AVID//DTD NSML 1.0//EN">
+<head>
+<meta rate=180>
+<rgroup number=4></rgroup>
+<wgroup number=4></wgroup>
+<formname>LW-STORY-GEN</formname>
+<storyid>05b63a27:00e8ba66:601e9615</storyid>
+</head>
+<story>
+<fields>
+<f id=page-number></f>
+<f id=done></f>
+<f id=rewrite></f>
+<f id=title>SOT ULAY: DENISE DOI</f>
+<f id=camera></f>
+<f id=video-id>08LWSOTULAYDENISESOI</f>
+<f id=pres1></f>
+<f id=pres2></f>
+<f id=format>SOT ULAY</f>
+<f id=audio-time>0</f>
+<f id=runs-time>0</f>
+<f id=total-time>0</f>
+<f id=back-time></f>
+<f id=event-status></f>
+<f id=item-channel>A</f>
+<f id=grfx></f>
+<f id=edit></f>
+<f id=create-date>1612617237</f>
+<f id=create-by>olivgard</f>
+<f id=modify-date>1612617237</f>
+<f id=modify-by>rosiwood</f>
+<f id=air-date></f>
+<f id=copyright></f>
+<f id=timecode></f>
+<f id=important></f>
+<f id=channel></f>
+<f id=sound></f>
+<f id=grams></f>
+<f id=var-3></f>
+</fields>
+<body>
+<p></p>
+<p><pi><b>SOT ULAY: DENISE DOI</b></pi></p>
+<p><pi><b>Dip sound at 11 secs</b></pi></p>
+<p><cc><b><i>"I've done something to this arm. Turns out I've partially dislocated my arm. Let me tell you, it's pain like I've never felt before."</i></b></cc></p>
+</body>
+</story>
