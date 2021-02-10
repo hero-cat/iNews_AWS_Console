@@ -7,8 +7,8 @@ import glob
 from threading import Thread
 from kivymd.app import MDApp
 from kivy.clock import Clock
-from data.inews_connection import generate_json
-from data.s3_connection import upload_to_aws
+from inews_connection import generate_json
+from s3_connection import upload_to_aws
 from botocore.exceptions import NoCredentialsError
 
 
