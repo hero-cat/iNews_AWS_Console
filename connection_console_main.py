@@ -39,7 +39,10 @@ class ConsoleApp(MDApp):
             self.root.ids.confbox.text = "RUNNING"
             self.root.ids.inewspulllbl.md_bg_color = 0.4, 0.960, 0.454, 1
             try:
-                generate_json("CTS.TX.TC2_LW", "test_rundown")
+                #generate_json("*LW.RUNORDERS.THURSDAY", "test_rundown")
+                generate_json("*GMB-LK.*LK.TX.LORRAINE", "test_rundown")
+                #generate_json("CTS.TX.TC2_LW", "test_rundown")
+                #generate_json("CTS.TX.TC3_TM", "test_rundown")
                 self.root.ids.inewsconflbl.md_bg_color = 0.4, 0.960, 0.454, 1
                 t = Thread(target=self.gen_json)
                 t.daemon = False

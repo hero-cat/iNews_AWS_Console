@@ -30,6 +30,7 @@ def generate_json(path, filename):
     # to the open text file and closes it.
     #
     for line in lines:
+
         with open("story/" + line, "wb") as story:
             ftp.retrbinary("RETR " + line, story.write)
         story.close()
@@ -60,6 +61,8 @@ def generate_json(path, filename):
             copy = False
             # Increment through every line in story file that was previously opened
             for row in story:
+                storyline["focus"] = "false"
+
                 # 2) If statement that checks if 'float' is in 'meta' line of story. Plus it decodes line from bytes and
                 # and strips off any new line characters that may be present
                 if "float" in (row.decode()).strip() and "<meta" in (row.decode()).strip():
@@ -79,10 +82,14 @@ def generate_json(path, filename):
                     storyline["break"] = "false"
 
 
+
+                # Extract the first part of story id to be used as a unique ID in the app
                 if "<storyid>" in (row.decode()).strip():
                     result = re.search('<storyid>(.*)</storyid>', (row.decode()).strip())
+                    sep = ':'
+                    stripped = result.group(1).split(sep, 1)[0]
 
-                    storyline["story_id"] = result.group(1)
+                    storyline["story_id"] = stripped
 
 
                 # 3) Looks at current line in story file and checks for 'field'
@@ -114,15 +121,20 @@ def generate_json(path, filename):
                     # 5) Tidy up - to make time names more uniformed
                     # If 'total-time uec' is found as a key
                     if key == "total-time uec":
-                        # Key is changed to 'total-time'
-                        key = "total-time"
+                        # Key is changed to 'totaltime'
+                        key = "totaltime"
                         # Adds new dictionary key, value to storyLine
                         storyline[key] = value
-                    # Same as above removing 'uec' from back-time
+                    # Same as above removing '-' from back-time
                     if "back-time" in key:
                         key = "backtime"
                         # Adds new dictionary key, value to storyLine
                         storyline[key] = value
+
+                    if "total-time" in key:
+                        key = 'totaltime'
+                        storyline[key] = value
+
 
                     if "page-number" in key:
                         key = "page"
@@ -189,13 +201,18 @@ def generate_json(path, filename):
 
     # For loop to increment through each storyrow (previously 'storyline') in the 'data' list
     for storyrow in data:
-        # Search the newly created storyrow to see if floated = True or total-time is empty string
-        if storyrow['floated'] == "true" or storyrow['total-time'] == "":
+
+        # Sometimes the TM rundown doesn't have a total-time field, assign a blank one
+        if not 'totaltime' in storyrow:
+            storyrow['totaltime'] = ""
+
+        # Search the newly created storyrow to see if floated = True or totaltime is empty string
+        if storyrow['floated'] == "true" or storyrow['totaltime'] == "":
             # IF so, add NUL value to the 'times' list
             times.append("00:00")
-        # Else add the actual total-time
+        # Else add the actual totaltime
         else:
-            times.append(storyrow['total-time'])
+            times.append(storyrow['totaltime'])
 
         # If backtime is empty, append to backtime_position list
         if storyrow['backtime'] == "":
@@ -236,10 +253,10 @@ def generate_json(path, filename):
             # and putting it through timedelta(time conversion) and storing it in variable named 'seconds'
             t = (times[len(times) - x - 1])
             m, s = t.split(':')
-            seconds = (int(datetime.timedelta(minutes=int(m), seconds=int(s)).total_seconds()))
+            current_seconds = (int(datetime.timedelta(minutes=int(m), seconds=int(s)).total_seconds()))
 
             # current_time will now equal itself minus seconds
-            current_time = current_time - int(seconds)
+            current_time = current_time - int(current_seconds)
             # Append to backtimes list with current_time converted to hours, minutes, seconds
             backtimes.append(str(datetime.timedelta(seconds=current_time)))
         else:
@@ -251,6 +268,7 @@ def generate_json(path, filename):
 
     # For loop to increment through each storyrow in the 'data' list
     for storyrow in data:
+
         # Search storyrow to see if floated = False and backtime is empty string
         if storyrow['floated'] != "true" and storyrow['backtime'] == "":
             # If it is the backtime will be set to backtimes at correct position
@@ -258,6 +276,48 @@ def generate_json(path, filename):
         # If '@' is in backtime, strip the @ character and convert to proper time 00:00:00
         if "@" in storyrow["backtime"]:
             storyrow["backtime"] = str(datetime.timedelta(seconds=int(storyrow["backtime"].strip('@'))))
+
+
+
+
+    now = datetime.datetime.now()
+
+    current_hours = now.hour
+    current_minutes = now.minute
+    current_seconds = now.second
+
+    current_total_seconds = (current_hours * 3600) + (current_minutes * 60) + current_seconds
+
+    
+
+    for storyrow in reversed(data):
+        #TODO: SPLICING GETS MESSED UP WITH 9AM AND EARLIER, NEED TO MAKE SURE NO COLONS ARE BEING PULLED THROUGH
+
+
+        bt_hours = (storyrow['backtime'][0:2])
+        bt_minutes = (storyrow['backtime'][3:5])
+        bt_seconds = (storyrow['backtime'][6:8])
+
+        print(bt_hours, bt_minutes, bt_seconds)
+
+        # if ':' in bt_hours:
+        #     # bt_hours = bt_hours[0:1]
+        #     print(bt_hours)
+        #
+        # if bt_hours != "":
+        #
+        #     story_total_time_seconds = (int(bt_hours) * 3600) + (int(bt_minutes) * 60) + int(bt_seconds)
+        #
+        #
+        #     if story_total_time_seconds <= current_total_seconds:
+        #
+        #         storyrow['focus'] = 'true'
+        #
+        #         print(storyrow)
+        #         break
+
+
+
 
     # Open .rundown JSON file located on web server, open in write mode as outfile and dump contents of data to outfile
     with open(filename+'.json', 'w') as outfile:
@@ -277,12 +337,20 @@ def generate_json(path, filename):
     # generate_json("CTS.TX.0630", "0630")
     # generate_json("CTS.TX.0700", "0700")
     # generate_json("CTS.TX.0800", "0800")
-generate_json("CTS.TX.TC2_LW", "test_rundown")
+#generate_json("CTS.TX.TC2_LW", "test_rundown")
     # generate_json("*GMB-LK.*GMB.TX.0600", "0600")
     # generate_json("*GMB-LK.*GMB.TX.0630", "0630")
     # generate_json("*GMB-LK.*GMB.TX.0700", "0700")
     # generate_json("*GMB-LK.*GMB.TX.0800", "0800")
-    # generate_json("*LW.RUNORDERS.PROGRAMME", "LW")
+#generate_json("*LW.RUNORDERS.THURSDAY", "test_rundown")
+generate_json("*GMB-LK.*LK.TX.LORRAINE", "test_rundown")
+
+
+
 
     # time.sleep(3)
     # counter += 1
+    # 0db647aa:01311838:60256dbc
+    # 0db647aa:0112a856:60294203
+    # 0db647aa:0112b7f2:602942a3
+    # 1CB647B2
