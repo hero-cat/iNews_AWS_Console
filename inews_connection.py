@@ -5,6 +5,14 @@ import re
 import datetime
 import json
 import os
+import itertools
+from itertools import cycle
+
+def pairwise(iterable):
+    "s -> (s0,s1), (s1,s2), (s2, s3), ..."
+    a, b = itertools.tee(iterable)
+    next(b, None)
+    return zip(a, b)
 
 
 def generate_json(path, filename):
@@ -194,6 +202,26 @@ def generate_json(path, filename):
     # consistently correct backtimes.
 
     # Creates four new list variables ('times', 'backtime', 'backtimes' and 'backtime_positions')
+
+
+    # splice = [0]
+    #
+    # for index, storyrow in enumerate(data):
+    #     if storyrow["backtime"]:
+    #         splice.append(index+1)
+    #
+    #
+    # spliced_data = []
+    #
+    # for current, next in zip(splice, splice[1:] + [splice[0]]):
+    #     spliced_data.append(data[current:next])
+    #
+    #
+    #
+    # final_list = []
+    #
+    # for rd_chunk in spliced_data:
+
     times = []
     backtime = []
     backtimes = []
@@ -201,6 +229,10 @@ def generate_json(path, filename):
 
     # For loop to increment through each storyrow (previously 'storyline') in the 'data' list
     for storyrow in data:
+
+        if storyrow['backtime'] != "":
+            storyrow['totaltime'] = ""
+
 
         # Sometimes the TM rundown doesn't have a total-time field, assign a blank one
         if not 'totaltime' in storyrow:
@@ -213,6 +245,7 @@ def generate_json(path, filename):
         # Else add the actual totaltime
         else:
             times.append(storyrow['totaltime'])
+            #print(storyrow['totaltime'])
 
         # If backtime is empty, append to backtime_position list
         if storyrow['backtime'] == "":
@@ -224,6 +257,8 @@ def generate_json(path, filename):
             backtime.append(storyrow["backtime"])
             backtime_position.append(storyrow["backtime"])
 
+
+            print(datetime.timedelta(seconds=int(storyrow["backtime"][1:])))
 
     # Two new variables:
     # current_time is retrieved from backtime list (-1 stores last value from list) and strips @ character
@@ -257,6 +292,7 @@ def generate_json(path, filename):
 
             # current_time will now equal itself minus seconds
             current_time = current_time - int(current_seconds)
+            print(str(datetime.timedelta(seconds=current_time)), str(datetime.timedelta(seconds=current_seconds)))
             # Append to backtimes list with current_time converted to hours, minutes, seconds
             backtimes.append(str(datetime.timedelta(seconds=current_time)))
         else:
@@ -280,6 +316,7 @@ def generate_json(path, filename):
 
 
 
+
     now = datetime.datetime.now()
 
     current_hours = now.hour
@@ -288,33 +325,26 @@ def generate_json(path, filename):
 
     current_total_seconds = (current_hours * 3600) + (current_minutes * 60) + current_seconds
 
-    
+    # for current_story, next_story in zip(reversed(data), reversed(data[1:] + [data[0]])):
+    for current_story in reversed(data):
 
-    for storyrow in reversed(data):
-        #TODO: SPLICING GETS MESSED UP WITH 9AM AND EARLIER, NEED TO MAKE SURE NO COLONS ARE BEING PULLED THROUGH
+        if current_story['backtime'] != '' and current_story['backtime'][0] not in ['1', '2']:
+            current_story['backtime'] = '0' + current_story['backtime']
 
+        bt_hours = (current_story['backtime'][0:2])
+        bt_minutes = (current_story['backtime'][3:5])
+        bt_seconds = (current_story['backtime'][6:8])
 
-        bt_hours = (storyrow['backtime'][0:2])
-        bt_minutes = (storyrow['backtime'][3:5])
-        bt_seconds = (storyrow['backtime'][6:8])
+        if ':' in bt_hours:
+            bt_hours = bt_hours[:-1]
 
-        print(bt_hours, bt_minutes, bt_seconds)
+        if bt_hours != "":
+            story_total_time_seconds = (int(bt_hours) * 3600) + (int(bt_minutes) * 60) + int(bt_seconds)
 
-        # if ':' in bt_hours:
-        #     # bt_hours = bt_hours[0:1]
-        #     print(bt_hours)
-        #
-        # if bt_hours != "":
-        #
-        #     story_total_time_seconds = (int(bt_hours) * 3600) + (int(bt_minutes) * 60) + int(bt_seconds)
-        #
-        #
-        #     if story_total_time_seconds <= current_total_seconds:
-        #
-        #         storyrow['focus'] = 'true'
-        #
-        #         print(storyrow)
-        #         break
+            if story_total_time_seconds <= current_total_seconds:
+                if current_story['totaltime'] != "00:00":
+                    current_story['focus'] = 'true'
+                    break
 
 
 
@@ -324,33 +354,17 @@ def generate_json(path, filename):
         outfile.write(json.dumps(data, indent=4, sort_keys=True))
 
 
-
-
-# counter = int()
-#
-# while True & counter >= 0:
-#
-#     print("Getting Rundown every 60 seconds, minutes passed: " + str(counter))
-
-    # Run the main body of code for each rundown and title accordingly
-    # generate_json("CTS.TX.0600", "0600")
-    # generate_json("CTS.TX.0630", "0630")
-    # generate_json("CTS.TX.0700", "0700")
-    # generate_json("CTS.TX.0800", "0800")
+# generate_json("CTS.TX.0600", "0600")
+# generate_json("CTS.TX.0630", "0630")
+# generate_json("CTS.TX.0700", "0700")
+# generate_json("CTS.TX.0800", "0800")
+generate_json("CTS.TX.TC3_TM", "test_rundown")
 #generate_json("CTS.TX.TC2_LW", "test_rundown")
-    # generate_json("*GMB-LK.*GMB.TX.0600", "0600")
-    # generate_json("*GMB-LK.*GMB.TX.0630", "0630")
-    # generate_json("*GMB-LK.*GMB.TX.0700", "0700")
-    # generate_json("*GMB-LK.*GMB.TX.0800", "0800")
+
+# generate_json("*GMB-LK.*GMB.TX.0600", "0600")
+# generate_json("*GMB-LK.*GMB.TX.0630", "0630")
+# generate_json("*GMB-LK.*GMB.TX.0700", "0700")
+# generate_json("*GMB-LK.*GMB.TX.0800", "0800")
+#generate_json("*GMB-LK.*LK.TX.LORRAINE", "test_rundown")
+#generate_json("*TM.*OUTPUT.RUNORDERS.TUESDAY.RUNORDER", "test_rundown")
 #generate_json("*LW.RUNORDERS.THURSDAY", "test_rundown")
-generate_json("*GMB-LK.*LK.TX.LORRAINE", "test_rundown")
-
-
-
-
-    # time.sleep(3)
-    # counter += 1
-    # 0db647aa:01311838:60256dbc
-    # 0db647aa:0112a856:60294203
-    # 0db647aa:0112b7f2:602942a3
-    # 1CB647B2

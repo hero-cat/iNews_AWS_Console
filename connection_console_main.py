@@ -39,10 +39,12 @@ class ConsoleApp(MDApp):
             self.root.ids.confbox.text = "RUNNING"
             self.root.ids.inewspulllbl.md_bg_color = 0.4, 0.960, 0.454, 1
             try:
+                #generate_json("*TM.*OUTPUT.RUNORDERS.TUESDAY.RUNORDER", "test_rundown")
                 #generate_json("*LW.RUNORDERS.THURSDAY", "test_rundown")
-                generate_json("*GMB-LK.*LK.TX.LORRAINE", "test_rundown")
+                #generate_json("*GMB-LK.*LK.TX.LORRAINE", "test_rundown")
                 #generate_json("CTS.TX.TC2_LW", "test_rundown")
                 #generate_json("CTS.TX.TC3_TM", "test_rundown")
+                generate_json("CTS.TX.TC3_TM", "test_rundown")
                 self.root.ids.inewsconflbl.md_bg_color = 0.4, 0.960, 0.454, 1
                 t = Thread(target=self.gen_json)
                 t.daemon = False
@@ -55,17 +57,17 @@ class ConsoleApp(MDApp):
 
     def gen_json(self):
         if self.running:
-            time.sleep(2)
+            time.sleep(1)
             if self.running:
                 self.root.ids.awspushlbl.md_bg_color = 0.4, 0.960, 0.454, 1
                 try:
                     upload_to_aws('test_rundown.json', 'hero-cat-test', 'test_rundown')
-                    time.sleep(5)
+                    time.sleep(1)
                     if self.running:
                         self.root.ids.awsconflbl.md_bg_color = 0.4, 0.960, 0.454, 1
                         self.counter += 1
                         self.root.ids.counter.text = str(self.counter)
-                        Clock.schedule_once(lambda dt: self.countdown(10, 'repeat'), 0)
+                        Clock.schedule_once(lambda dt: self.countdown(3, 'repeat'), 0)
                 except FileNotFoundError:
                     print('File not found')
                     self.root.ids.confbox.text = "FILE NOT FOUND - TRYING AGAIN"
