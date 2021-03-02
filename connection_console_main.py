@@ -50,7 +50,7 @@ class ConsoleApp(MDApp):
                 t.daemon = False
                 t.start()
             except TimeoutError:
-                print('WOBBLE WOBBLE WOBBLE WOBBLE ' + str(self.counter))
+                print('WOBBLE WOBBLE  WOBBLE ' + str(self.counter))
                 self.root.ids.confbox.text = "FTP TIMEOUT - TRYING AGAIN"
                 self.cut_to_black()
                 self.start()

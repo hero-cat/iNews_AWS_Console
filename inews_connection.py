@@ -154,18 +154,15 @@ def generate_json(path, filename):
                     if key == "title":
                         if len(value) >= 30:
                             value = (value[:30] + "...")
-                            # print(value)
+     
 
                     # Reduce format field to 20 characters or less
                     if key == "format":
                         if len(value) >= 20:
                             value = (value[:20] + "...")
-                            # print(value)
+                       
 
 
-                    # length_key = len(key[0])
-                    # print(length_key)
-                    # print(key[3])
 
                     # 6) Check if 'time' is within key, excluding 'backtime'
                     if "time" in key and key != "backtime":
@@ -245,7 +242,7 @@ def generate_json(path, filename):
         # Else add the actual totaltime
         else:
             times.append(storyrow['totaltime'])
-            #print(storyrow['totaltime'])
+
 
         # If backtime is empty, append to backtime_position list
         if storyrow['backtime'] == "":
@@ -257,8 +254,6 @@ def generate_json(path, filename):
             backtime.append(storyrow["backtime"])
             backtime_position.append(storyrow["backtime"])
 
-
-            print(datetime.timedelta(seconds=int(storyrow["backtime"][1:])))
 
     # Two new variables:
     # current_time is retrieved from backtime list (-1 stores last value from list) and strips @ character
@@ -292,7 +287,7 @@ def generate_json(path, filename):
 
             # current_time will now equal itself minus seconds
             current_time = current_time - int(current_seconds)
-            print(str(datetime.timedelta(seconds=current_time)), str(datetime.timedelta(seconds=current_seconds)))
+           
             # Append to backtimes list with current_time converted to hours, minutes, seconds
             backtimes.append(str(datetime.timedelta(seconds=current_time)))
         else:
